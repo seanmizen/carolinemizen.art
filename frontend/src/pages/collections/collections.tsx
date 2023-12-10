@@ -7,8 +7,8 @@ interface CollectionsProps {}
 const Collections: FC<CollectionsProps> = () => {
   return (
     <>
-      <div>Collections</div>
       <Link to={ROUTES.home.path}>Home</Link>
+      <div>Collections</div>
     </>
   );
 };

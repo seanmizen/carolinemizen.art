@@ -2,8 +2,14 @@ import { FC } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ROUTES } from "./constants";
 import { Collections, Home, Swatch } from "./pages";
+import { Link } from "react-router-dom";
 
-const Placeholder: FC = () => <div>temp</div>;
+const Placeholder: FC = () => (
+  <>
+    <Link to={ROUTES.home.path}>Home</Link>
+    <div>TODO</div>
+  </>
+);
 
 const AppRoutes: FC = () => {
   return (

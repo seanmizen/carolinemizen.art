@@ -17,6 +17,9 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: justify;
+
+  --font-family-hero: 'Merriweather', system-ui, serif;
+  --font-family: 'IntLatoer', system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -37,6 +40,7 @@ body {
 }
 
 h1 {
+  font-family: var(--font-family-hero);
   font-size: 3.2em;
   line-height: 1.1;
 }

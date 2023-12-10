@@ -1,15 +1,48 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
-import { ROUTES } from "../../constants";
+import { LandingPageWrapper } from "./home.styled";
+import { Nav } from "../../components/nav";
 
 interface HomeProps {}
 
 const Home: FC<HomeProps> = () => {
   return (
     <>
-      <Link to={ROUTES.collections.path}>Collections</Link>
-      <Link to={ROUTES.swatch.path}>Swatch</Link>
-      <div>Home</div>
+      <LandingPageWrapper>
+        <h1>Art by Caroline</h1>
+        {/* little arrow which appears after 5 seconds of screentime */}
+      </LandingPageWrapper>
+      <Nav />
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
+      <div>Sticky</div>
     </>
   );
 };

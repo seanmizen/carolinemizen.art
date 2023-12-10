@@ -1,0 +1,20 @@
+{
+  "name": "carolinemizen.art",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "cd frontend && bun dev",
+    "start-old": "tsc --watch"
+  },
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

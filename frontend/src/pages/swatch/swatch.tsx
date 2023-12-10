@@ -1,14 +1,15 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
-import { ROUTES } from "../../constants";
+import { Nav } from "../../components/nav";
 
 interface SwatchProps {}
 
 const Swatch: FC<SwatchProps> = () => {
   return (
     <>
-      <Link to={ROUTES.home.path}>Home</Link>
-      <div>Swatch</div>
+      <Nav />
+      <div>
+        <h2>Swatch</h2>
+      </div>
 
       <div>
         <div>TODO:</div>

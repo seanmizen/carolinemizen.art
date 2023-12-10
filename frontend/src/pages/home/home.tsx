@@ -11,6 +11,7 @@ const Home: FC<HomeProps> = () => {
         <h1>Art by Caroline</h1>
         {/* little arrow which appears after 5 seconds of screentime */}
       </LandingPageWrapper>
+      {/* large cards linking to collections */}
       <Nav />
       <div>Sticky</div>
       <div>Sticky</div>

@@ -1,14 +1,15 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
-import { ROUTES } from "../../constants";
+import { Nav } from "../../components/nav";
 
 interface CollectionsProps {}
 
 const Collections: FC<CollectionsProps> = () => {
   return (
     <>
-      <Link to={ROUTES.home.path}>Home</Link>
-      <div>Collections</div>
+      <Nav />
+      <div>
+        <h2>Collections</h2>
+      </div>
     </>
   );
 };

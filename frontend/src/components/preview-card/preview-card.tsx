@@ -3,16 +3,16 @@ import {
   Wrapper,
   Title,
   Description,
-  Image,
   IconRow,
   IconWrapper,
   ImageContainer,
 } from "./preview-card.styled";
+import { LazyLoadImage, LazyLoadImageProps } from "..";
 
 interface PreviewCardProps {
   title?: string;
   description?: string;
-  imageSrc?: string;
+  imageProps?: LazyLoadImageProps;
   icons?: string[];
 }
 
@@ -24,19 +24,24 @@ const iconsExample = [
   "https://picsum.photos/32/32",
 ];
 
+const imagePropsExample: LazyLoadImageProps = {
+  src: "https://picsum.photos/300/300",
+  alt: "Gallery preview image",
+};
+
 const PreviewCard: FC<PreviewCardProps> = ({
   title,
   description,
-  imageSrc = "https://picsum.photos/320/180",
+  imageProps = imagePropsExample,
   icons = iconsExample,
 }) => {
   return (
     <Wrapper>
       {title && <Title>{title}</Title>}
       {description && <Description>{description}</Description>}
-      {imageSrc && (
+      {imageProps && (
         <ImageContainer>
-          <Image src={imageSrc} loading="lazy" />
+          <LazyLoadImage {...imageProps} />
         </ImageContainer>
       )}
       {icons && icons.length && (

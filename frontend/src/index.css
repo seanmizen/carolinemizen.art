@@ -4,6 +4,10 @@
   /* Backgrounds */
   --background-color: #242424;  /* Dark grey for main background */
   --nav-background-color: #1b1b1b;  /* Slightly darker grey for navigation */
+  /* secondary, tertiary, quaternary colors get lighter */
+  --background-color-secondary: #2a2a2a;  /* Slightly lighter grey for secondary background */
+  --background-color-tertiary: #333333;  /* Slightly lighter grey for tertiary background */
+  --background-color-quaternary: #3d3d3d;  /* Slightly lighter grey for quaternary background */
 
   /* Text */
   --text-color: #E1E1E1;  /* Light grey for general text */
@@ -13,8 +17,12 @@
 
   /* Buttons and other elements */
   /* --button-background-color: #333333;  Medium grey for buttons */
-  --button-background-color: #1a1a1a;  /* no chatGPT, darkgrey for buttons */
+  --button-background-color: var(----background-color-tertiary);  /* no chatGPT, darkgrey for buttons */
   --button-text-color: #FFFFFF;  /* White for button text */
+
+  /* lilac */
+  --border-color: #e8e8ff;
+  --border-color-secondary: #d9d9ff;
 }
 
 @media (prefers-color-scheme: light) {
@@ -22,6 +30,9 @@
       /* Backgrounds */
       --background-color: #ffffff;  /* White for main background */
       --nav-background-color: #f5f5f5;  /* Off-white for navigation */
+      --background-color-secondary: #f0f0f0;  /* Slightly darker off-white for secondary background */
+      --background-color-tertiary: #e5e5e5;  /* Slightly darker off-white for tertiary background */
+      --background-color-quaternary: #d9d9d9;  /* Slightly darker off-white for quaternary background */
 
       /* Text */
       --text-color: #213547;  /* Dark blue for general text */
@@ -32,6 +43,10 @@
       /* Buttons and other elements */
       --button-background-color: #f9f9f9;  /* Very light grey for buttons */
       --button-text-color: #213547;  /* Dark blue for button text, same as text color */
+
+      /* lilac */
+      --border-color: #e8e8ff;
+      --border-color-secondary: #d9d9ff;
   };
 }
 
@@ -53,7 +68,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  max-width: 1280px;
+  /* TODO: reinstate max-width but do cool stuff at the edges */
+  /* max-width: 1280px; */
   margin: 0 auto;
   text-align: justify;
 }

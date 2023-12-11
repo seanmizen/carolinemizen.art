@@ -6,7 +6,7 @@ export const StyledNav = styled("nav")({
   alignItems: "center",
   gap: "1rem",
   padding: "1rem 0.8rem",
-  width: "100vw",
+  width: "100%",
   backgroundColor: "var(--nav-background-color)",
   position: "sticky",
   top: 0,

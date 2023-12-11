@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Nav } from "../../components/nav";
+import { PreviewCard } from "../../components/preview-card/preview-card";
 
 interface SwatchProps {}
 
@@ -10,6 +11,12 @@ const Swatch: FC<SwatchProps> = () => {
       <div>
         <h2>Swatch</h2>
       </div>
+
+      <div>Preview Card:</div>
+      <PreviewCard
+        title="Title"
+        description={`Long description of this gallery\nwith multiple lines`}
+      />
 
       <div>
         <div>TODO:</div>

@@ -6,6 +6,7 @@ import {
   Image,
   IconRow,
   IconWrapper,
+  ImageContainer,
 } from "./preview-card.styled";
 
 interface PreviewCardProps {
@@ -33,7 +34,11 @@ const PreviewCard: FC<PreviewCardProps> = ({
     <Wrapper>
       {title && <Title>{title}</Title>}
       {description && <Description>{description}</Description>}
-      {imageSrc && <Image src={imageSrc} loading="lazy" />}
+      {imageSrc && (
+        <ImageContainer>
+          <Image src={imageSrc} loading="lazy" />
+        </ImageContainer>
+      )}
       {icons && icons.length && (
         <IconRow>
           {icons.map((icon) => (

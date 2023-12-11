@@ -4,6 +4,7 @@ export const Wrapper = styled("button")({
   // fon
   display: "flex",
   flexDirection: "column",
+  width: "300px",
   maxWidth: "300px",
   padding: "1rem 0 0 0",
   backgroundColor: "var(--background-color-tertiary)",
@@ -25,12 +26,28 @@ export const Title = styled("div")({
 
 export const Description = styled("div")({});
 
+export const ImageContainer = styled("div")({
+  width: "100%",
+  // maxHeight: "250px",
+  height: "200px", // Fixed height for the placeholder
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  overflow: "hidden",
+});
+
 export const Image = styled("img")({
   width: "100%",
-  maxHeight: "250px",
-  height: "auto",
+  height: "100%",
   objectFit: "cover",
 });
+
+// export const Image = styled("img")({
+//   width: "100%",
+//   maxHeight: "250px",
+//   height: "auto",
+//   objectFit: "cover",
+// });
 
 export const IconRow = styled("div")({
   display: "flex",
@@ -41,12 +58,6 @@ export const IconRow = styled("div")({
 });
 
 export const IconWrapper = styled("div")({
-  // display: "flex",
-  // justifyContent: "center",
-  // alignItems: "center",
-  // padding: "0.5rem",
-  // width: "100%",
-  // height: "100%",
-  // padding: "1rem",
-  // backgroundColor: "var(--background-color-secondary)",
+  height: "50px",
+  width: "50px",
 });

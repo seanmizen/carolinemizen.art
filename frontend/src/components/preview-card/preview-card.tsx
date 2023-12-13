@@ -8,8 +8,9 @@ import {
   ImageContainer,
 } from "./preview-card.styled";
 import { LazyLoadImage, LazyLoadImageProps } from "..";
+import { LinkProps } from "react-router-dom";
 
-interface PreviewCardProps {
+interface PreviewCardProps extends LinkProps {
   title?: string;
   description?: string;
   imageProps?: LazyLoadImageProps;
@@ -34,9 +35,10 @@ const PreviewCard: FC<PreviewCardProps> = ({
   description,
   imageProps = imagePropsExample,
   icons = iconsExample,
+  ...rest
 }) => {
   return (
-    <Wrapper>
+    <Wrapper {...rest}>
       {title && <Title>{title}</Title>}
       {description && <Description>{description}</Description>}
       {imageProps && (

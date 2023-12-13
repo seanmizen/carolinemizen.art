@@ -1,10 +1,11 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Nav } from "../../components/nav";
 import { PreviewCard } from "../../components/preview-card/preview-card";
 
 interface SwatchProps {}
 
 const Swatch: FC<SwatchProps> = () => {
+  const [urlOnLoad] = useState(window.location.toString());
   return (
     <>
       <Nav />
@@ -16,6 +17,7 @@ const Swatch: FC<SwatchProps> = () => {
       <PreviewCard
         title="Title"
         description={`Long description of this gallery\nwith multiple lines`}
+        to={urlOnLoad}
       />
 
       <div>

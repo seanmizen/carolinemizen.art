@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const Wrapper = styled("button")({
+export const Wrapper = styled(Link)({
   // fon
   display: "flex",
   flexDirection: "column",

@@ -2,11 +2,11 @@
   "name": "carolinemizen.art",
   "private": true,
   "workspaces": [
-    "frontend"
+    "src/frontend"
   ],
   "scripts": {
     "build": "tsc",
-    "start": "cd frontend && bun dev",
+    "start": "cd src/frontend && bun dev",
     "start-old": "tsc --watch"
   },
   "module": "index.ts",

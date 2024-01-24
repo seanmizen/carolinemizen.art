@@ -31,7 +31,7 @@ const Home: FC<HomeProps> = () => {
       setTimeout(() => {
         console.log("showing arrow");
         setShowArrow(true);
-      }, 1000)
+      }, 4000)
     );
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -43,9 +43,18 @@ const Home: FC<HomeProps> = () => {
     <>
       <LandingPage>
         <h1>Art by Caroline</h1>
-        {/* little arrow which appears after 5 seconds of screentime */}
-        {/* {showArrow && <Arrow>arrow</Arrow>} */}
-        <Arrow isVisible={showArrow}>↓ more below ↓</Arrow>
+        <Arrow
+          type="button"
+          onClick={() => {
+            window.scrollTo({
+              top: window.innerHeight - 10,
+              behavior: "smooth",
+            });
+          }}
+          isVisible={showArrow}
+        >
+          ↓ more below ↓
+        </Arrow>
       </LandingPage>
       <HeroLinksWrapper>
         <h2>Hero Links</h2>

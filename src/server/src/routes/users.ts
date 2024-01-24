@@ -9,11 +9,8 @@ import {
 
 const users = express.Router();
 
-users.get('/', (req, res) => {
-  res.send('ah!');
-});
-users.post('/users', createUser);
-users.get('/users', getUsers);
+users.post('/', createUser);
+users.get('/', getUsers);
 // users.get('/users/:id', getUserById);
 // users.patch('/users/:id', updateUserById);
 // users.delete('/users/:id', deleteUserById);

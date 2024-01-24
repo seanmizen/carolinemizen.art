@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import userRoutes from './routes/userRoutes';
-import { pool } from './db/connection';
+import userRoutes from './routes/users';
+// import { pool } from './db/connection';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -13,10 +13,10 @@ app.use(bodyParser.json());
 app.use('/users', userRoutes);
 
 // Connect to the database
-pool
-  .connect()
-  .then(() => console.log('Connected to database'))
-  .catch(err => console.error('Database connection error', err));
+// pool
+//   .connect()
+//   .then(() => console.log('Connected to database'))
+//   .catch(err => console.error('Database connection error', err));
 
 // Start the server
 app.listen(port, () => {

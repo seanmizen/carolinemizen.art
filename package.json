@@ -7,7 +7,9 @@
   "scripts": {
     "build": "tsc",
     "start": "cd src/frontend && bun dev",
-    "start-old": "tsc --watch"
+    "start-old": "tsc --watch",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format-check": "prettier --check \"src/**/*.ts\""
   },
   "module": "index.ts",
   "type": "module",
@@ -16,5 +18,8 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "prettier": "^3.2.4"
   }
 }

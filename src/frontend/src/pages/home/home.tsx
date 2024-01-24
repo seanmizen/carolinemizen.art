@@ -1,13 +1,7 @@
-import { FC, useEffect, useState } from "react";
-import {
-  Arrow,
-  Body,
-  HeroLinksRow,
-  HeroLinksWrapper,
-  LandingPage,
-} from "./home.styled";
-import { Nav, PreviewCard } from "../../components";
-import { ROUTES } from "../../constants";
+import { FC, useEffect, useState } from 'react';
+import { Arrow, Body, HeroLinksRow, HeroLinksWrapper, LandingPage } from './home.styled';
+import { Nav, PreviewCard } from '../../components';
+import { ROUTES } from '../../constants';
 
 interface HomeProps {}
 
@@ -20,21 +14,21 @@ const Home: FC<HomeProps> = () => {
    */
   const handleScroll = () => {
     // setShouldShowArrow(false);
-    console.log("rah");
-    window.removeEventListener("scroll", handleScroll);
+    console.log('rah');
+    window.removeEventListener('scroll', handleScroll);
     clearTimeout();
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     setTimer(
-      setTimeout(() => {
-        console.log("showing arrow");
+      window.setTimeout(() => {
+        console.log('showing arrow');
         setShowArrow(true);
-      }, 4000)
+      }, 4000),
     );
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
       clearTimeout(timer);
     };
   }, []);
@@ -48,7 +42,7 @@ const Home: FC<HomeProps> = () => {
           onClick={() => {
             window.scrollTo({
               top: window.innerHeight - 10,
-              behavior: "smooth",
+              behavior: 'smooth',
             });
           }}
           isVisible={showArrow}

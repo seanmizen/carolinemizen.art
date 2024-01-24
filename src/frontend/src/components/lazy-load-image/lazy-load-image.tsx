@@ -1,5 +1,5 @@
-import { FC, useState } from "react";
-import { Image } from "./lazy-load-image.styled";
+import { FC, useState } from 'react';
+import { Image } from './lazy-load-image.styled';
 
 interface LazyLoadImageProps {
   src: string;

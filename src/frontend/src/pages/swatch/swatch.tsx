@@ -1,6 +1,6 @@
-import { FC, useState } from "react";
-import { Nav } from "../../components/nav";
-import { PreviewCard } from "../../components/preview-card/preview-card";
+import { FC, useState } from 'react';
+import { Nav } from '../../components/nav';
+import { PreviewCard } from '../../components/preview-card/preview-card';
 
 interface SwatchProps {}
 

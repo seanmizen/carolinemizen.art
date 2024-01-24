@@ -1,5 +1,5 @@
-import { FC } from "react";
-import { Nav } from "../../components/nav";
+import { FC } from 'react';
+import { Nav } from '../../components/nav';
 
 interface CollectionsProps {}
 

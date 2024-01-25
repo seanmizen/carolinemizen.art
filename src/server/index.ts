@@ -22,7 +22,7 @@ const main = async () => {
   app.use(middleware); // currently errors only - is this middleware?
 
   // Connect to the database
-  const pool = await createSlonikPool();
+  // const pool = await createSlonikPool();
 
   app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);

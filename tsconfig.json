@@ -17,7 +17,11 @@
     "allowJs": true,
     "types": [
       "bun-types", // add Bun global
-      "web" // https://stackoverflow.com/a/77103144
-    ]
-  }
+      "web", // https://stackoverflow.com/a/77103144
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": ["../shared/*"],
+    },
+  },
 }

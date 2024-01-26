@@ -3,7 +3,10 @@ import { readFile, writeFile } from 'fs/promises';
 import { join } from 'path';
 import { User } from '@shared/types';
 
-const dataPath = join(import.meta.dir, '..', 'data', 'users.json');
+const dataPath = join(import.meta.dir, '../..', 'data', 'users.json');
+
+// on server start, create file if it doesn't exist
+writeFile(dataPath, JSON.stringify([]), { flag: 'wx' }).catch(() => {});
 
 const readJsonFile: () => Promise<User[]> = async () => {
   try {
